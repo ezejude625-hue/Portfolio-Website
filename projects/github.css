@@ -1,0 +1,89 @@
+body{
+    background-color: #bbb;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow-x: hidden;
+}
+
+/* header */
+.head{
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+.head h1{
+    font-size: 24px;
+}
+.head nav{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    font-size: 17px;
+}
+.head nav a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.head nav a:hover{
+    color: rgb(32, 199, 143);
+    transform: scale(1.1);
+    text-decoration: dotted;
+}
+
+/* about */
+.about-github{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px 10px;
+}
+
+p, li{
+    font-size: 19px;
+}
+
+/* interface */
+.interface{
+    background-color: #f9f9f9ad;
+    padding: 10px;
+    margin: 20px 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 10px;
+}
+.part{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+}
+.repo-creation{
+    background-color: #fff;
+    padding: 10px 20px;
+    margin: 20px 10px;
+    border-radius: 10px;
+}
+.linking-vscode{
+    background-color: #fff;
+    padding: 10px 20px;
+    margin: 20px 10px;
+    border-radius: 10px;
+}
+.collaboration{
+    background-color: #fff;
+    padding: 10px 20px;
+    margin: 20px 10px;
+    border-radius: 10px;
+    margin-bottom: 70px;
+}
+.repo-creation li, .collaboration li{
+    margin-bottom: 10px;
+}
+
+/* footer */
+footer{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}

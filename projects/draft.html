@@ -1,0 +1,764 @@
+<!--<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/TextPlugin.min.js"></script>  typing effect-->
+<!-- <img src="https://www.vecteezy.com/png/27127463-javascript-logo-png-javascript-icon-transparent-png" alt="">  -->
+<!-- Submit section -->
+<!-- <button id="submit" type="submit" class="button" value="Send" onclick="saveData()"> --> <!--
+<style>
+    /* Section styling */
+/*section {
+    /*padding: 100px 20px;*/
+    /*min-height: 100vh;*/
+   /* opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}*/
+/* section{
+    animation: fadeIn 3s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
+} */
+
+
+/*
+
+
+.icon {
+    font-size: 26px;
+    display: none;
+    cursor: pointer;
+    /*hamburger hidden on large screen*/ /*
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 18px;
+}
+
+.icon span {
+    display: block;
+    height: 3px;
+    width: 28px;
+    background: #F2E9E4;
+    border-radius: 3px;
+    transition: 0.3s;
+    margin: 5px;
+}
+
+/* when checked hamburger animation *//*
+#menu:checked+.nav__button .icon span:nth-child(1) {
+    transform: rotate(45deg) translate(5.5px, 5.5px);
+}
+
+#menu:checked+.nav__button .icon span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu:checked+.nav__button .icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(5.5px, -5.5px);
+}
+
+// makes when the button is tapped not to show any light
+.nav__button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.nav__button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.img__container {
+    max-width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    order: 2;
+}
+
+.img {
+    width: 50%;
+    height: auto;
+    min-width: 0px;
+    max-width: 400px;
+    margin: 10px 60px 50px 89px;
+    outline: 3px solid #22223B;
+    outline-offset: 4px;
+    border-radius: 50%;
+}
+
+
+*/
+
+
+<!- window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+  loader.classList.add("hidden");
+}); 
+
+
+
+/*text-shadow:  100px 100px 200px #00384c,
+                    -100px -100px 200px #0066a1;
+    background: linear-gradient(45deg,red,purple,#f805f8,#000);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;*/
+
+
+    /* animation: typing 2s steps(16) alternate infinite, blink 0.75ms step-end infinite, moveColors 3s linear infinite; */
+    /*#007ca9   #154e63 #2570a8 #043871 #187aab*/ /*
+</style>
+
+<script>
+   // section reveal 
+/*const sections = document.querySelectorAll("section");
+
+function revealOnScroll() {
+  const triggerBottom = window.innerHeight * 0.8;
+  sections.forEach(sec => {
+    const boxTop = sec.getBoundingClientRect().top;
+    if (boxTop < triggerBottom) {
+      sec.classList.add("visible");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);*/
+
+
+
+
+/*
+function initAOS() {
+    AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false,
+        offset: 100,
+        delay: 0,
+        disable: false // Enable on all devices
+    });
+}*/
+
+ /*/ // Remove any existing event listeners // $sendBtn.off('click touchend');*/
+
+/*
+// Validate
+    if (!name || !email || !subject || !message) {
+        showNotification('Please fill in all fields', 'error');
+    }
+        
+    if (!isValidEmail(email)) {
+    showNotification('Please enter a valid email address', 'error');
+    }
+*/
+
+/*
+window.addEventListener('load', () => {
+    const loader = document.getElementById('loader');
+
+    if (loader) {
+        loader.style.transition = 'opacity 0.5s ease';
+        loader.style.opacity = '0';
+
+        setTimeout(() => {
+            loader.style.display = 'none';
+        }, 10000);
+    }
+});* 
+
+//the typing animation
+/*
+
+function initTyped() {
+    if ($('.typing-text').length) {
+        new Typed('.typing-text', {
+            strings: [
+                'HTML & CSS',
+                'JavaScript',
+                'Responsive Design',
+                'API Integration',
+                'Modern Web Apps'
+            ],
+            typeSpeed: 80,
+            backSpeed: 50,
+            backDelay: 2000,
+            loop: true
+        });
+    }
+}
+*/
+
+
+/*
+
+// darkmode stuff 1
+let dark= document.getElementsByClassName("fa-moon");
+let light = document.getElementsByClassName("fa-sun");
+// Dark/Light Mode Toggle
+const themeIcon = document.getElementById("themeIcon");
+const themeToggle = document.getElementById("theme-toggle");
+themeToggle.addEventListener("click", () => {
+  const currentTheme = document.documentElement.getAttribute("data-theme");
+  if (currentTheme === "dark") {
+    document.documentElement.setAttribute("data-theme", "light");
+    themeIcon.classList.remove("fa-sun");
+    themeIcon.classList.add("fa-moon");
+    themeToggle.classList.add("dark");
+  } else {
+    document.documentElement.setAttribute("data-theme", "dark");
+    themeIcon.classList.remove("fa-moon");
+    themeIcon.classList.add("fa-sun");
+    themeToggle.classList.add("light");
+  }
+});
+// darkmode stuff 2
+ const darkModeToggle = document.getElementById('darkModeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const themeText = document.getElementById('themeText');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+
+            if (body.classList.contains('dark-mode')) {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                themeText.textContent = 'Dark Mode';
+            } else {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                themeText.textContent = 'Light Mode';
+            }
+        });
+*/
+
+/*
+const form = document.getElementById('contactForm');
+const successMessage = document.getElementById('successMessage');
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault();  //stops page from refreshing
+
+    //optional: do something with form data here (AJAX, FETCH, etc.)
+    const formData = new FormData(form);
+    console.log('Form Submitted:', Object.fromEntries(formData.entries()));
+
+    // Form success message
+    successMessage.style.display = 'block';
+
+    //hide success message after 3 seconds
+    setTimeout(() => {
+        successMessage.style.display = 'none';
+    }, 3000);
+
+    //clears form
+    form.reset();
+});
+
+
+// Scroll-to-top button
+const scrollBtn = document.getElementById('scrollTopBtn');
+window.addEventListener('scroll', () => {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    scrollBtn.style.display = 'block';
+  } else {
+    scrollBtn.style.display = 'none';
+  }
+});
+scrollBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+
+// animation on scroll 
+AOS.init(
+    {
+      duration: 1000,
+      once: true
+    }
+);
+
+// eventlistener for nav
+let navigation = document.querySelector(".navigation");        
+navigation.addEventListener("click", function() {
+  navigation.classList.add("show");
+});
+
+const swiper = new Swiper('.projects', {
+    // Number of slides to show at once
+    slidesPerView: 1,
+    spaceBetween: 50,
+
+    // Enable loop mode
+    loop: true,
+
+    // Autoplay
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+
+    // Pagination
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    // Responsive breakpoints
+    breakpoints: {
+        480: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+    },
+
+    // Effects
+    effect: 'slide',
+    speed: 600,
+
+    // Keyboard control
+    keyboard: {
+        enabled: true,
+    },
+
+    // Mouse wheel control
+    mousewheel: false,
+});
+
+window.addEventListener('load', () => {
+    const loader = document.getElementById('loader');
+
+    if (loader) {
+        loader.style.transition = 'opacity 0.5s ease';
+        loader.style.opacity = '0';
+
+        setTimeout(() => {
+            loader.style.display = 'none';
+        });
+    }
+}, 5000);
+
+*/
+
+
+
+
+
+
+
+
+
+
+/*
+
+function saveData() {
+    let fullname = document.getElementById("fullname").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let message = document.getElementById("message").value;
+    
+    
+    // an object to hold them 
+
+    let userData = {
+        fullname: fullname,
+        email: email,
+        phone: phone,
+        message: message
+    };
+
+    localStorage.setItem("formData", JSON.stringify(userData));
+
+    // clears form fields
+    document.getElementById("fullname").value = "";
+    document.getElementById("phone").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
+
+    // clears form 
+    form.reset();
+
+}*/
+/*
+
+
+//the almighty swiper slider for projects
+/*
+
+function initSwiper() {
+    if ($('.projectsSwiper').length === 0) {
+        return;
+    }
+    
+    const projectsSwiper = new Swiper('.projectsSwiper', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        centeredSlides: true,
+        
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true
+        },
+        
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        
+        breakpoints: {
+            320: { slidesPerView: 1, spaceBetween: 15 },
+            480: { slidesPerView: 1, spaceBetween: 20 },
+            768: { slidesPerView: 2, spaceBetween: 25 },
+            1024: { slidesPerView: 2, spaceBetween: 30 },
+            1200: { slidesPerView: 3, spaceBetween: 30 }
+        },
+        
+        touchRatio: 1,
+        touchAngle: 45,
+        grabCursor: true
+    });
+}
+
+*/
+
+
+/*
+
+
+//while on scroll the skill bar that moves 
+/*
+
+
+function initSkillBars() {
+    const $skillBars = $('.skill-progress');
+    let skillsAnimated = false;
+    
+    $(window).on('scroll', function() {
+        if (!skillsAnimated && isInViewport($skillBars.first())) {
+            skillsAnimated = true;
+            
+            $skillBars.each(function() {
+                const $this = $(this);
+                const progress = $this.data('progress');
+                
+                $this.animate({ width: progress + '%' }, 1500);
+            });
+        }
+    });
+}
+
+
+*/
+
+
+
+
+
+
+/*/ The copy and paste code functionality
+/*
+
+function initCodeCopy() {
+    $('.code-example').each(function() {
+        const $codeBlock = $(this);
+        const $copyBtn = $('<button class="copy-code-btn"><i class="fas fa-copy"></i> Copy</button>');
+        
+        $copyBtn.css({
+            position: 'absolute',
+            top: '10px',
+            right: '10px',
+            background: 'rgba(255, 255, 255, 0.1)',
+            color: 'white',
+            border: 'none',
+            padding: '0.5rem 1rem',
+            borderRadius: '5px',
+            cursor: 'pointer',
+            fontSize: '0.85rem',
+            zIndex: 10
+        });
+        
+        $codeBlock.css('position', 'relative').append($copyBtn);
+        
+        $copyBtn.on('click touchend', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const code = $codeBlock.find('code').text();
+            
+            navigator.clipboard.writeText(code).then(function() {
+                $copyBtn.html('<i class="fas fa-check"></i> Copied!')
+                       .css('background', '#10b981');
+                
+                setTimeout(function() {
+                    $copyBtn.html('<i class="fas fa-copy"></i> Copy')
+                           .css('background', 'rgba(255, 255, 255, 0.1)');
+                }, 2000);
+            });
+        });
+    });
+}
+*/
+
+
+
+
+
+
+
+//To show notifications 
+/*
+
+function showNotification(message, type = 'success') {
+    const icon = type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle';
+    const bgColor = type === 'success' ? '#10b981' : '#ef4444';
+    
+    const $notification = $(`
+        <div class="notification notification-${type}">
+            <i class="fas ${icon}"></i>
+            <span>${message}</span>
+        </div>
+    `);
+    
+    $notification.css({
+        position: 'fixed',
+        top: '100px',
+        right: '-300px',
+        background: bgColor,
+        color: 'white',
+        padding: '1rem 1.5rem',
+        borderRadius: '10px',
+        boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '0.75rem',
+        zIndex: 10000,
+        fontWeight: '500'
+    });
+    
+    $('body').append($notification);
+    
+    // Slide in
+    $notification.animate({ right: '30px' }, 300);
+    
+    // Remove after 4 seconds
+    setTimeout(function() {
+        $notification.animate({ right: '-300px' }, 300, function() {
+            $(this).remove();
+        });
+    }, 4000);
+}
+    *
+</script>
+<!- auth modal  --><!--
+ 
+<div id="auth-modal" class="modal-backdrop" role="dialog" aria-modal="true">
+  <div class="modal">
+    <div class="modal-left">
+      <button id="close-auth" class="btn" style="float:right">&times;</button>
+      <h2>Sign in to LaunchPoint</h2>
+      <form id="login-form" class="form">
+        <label for="login-email">Email</label>
+        <input id="login-email" type="email" required placeholder="you@company.com">
+        <label for="login-pass">Password</label>
+        <input id="login-pass" type="password" required placeholder="••••••">
+        <button type="submit" class="btn btn-cta">Sign in</button>
+      </form>
+      <form id="register-form" class="form" style="display:none">
+        <label for="reg-name">Full name</label>
+        <input id="reg-name" type="text" required placeholder="Jane Doe">
+        <label for="reg-email">Email</label>
+        <input id="reg-email" type="email" required placeholder="you@company.com">
+        <label for="reg-pass">Password</label>
+        <input id="reg-pass" type="password" required placeholder="Strong password">
+        <button type="submit" class="btn btn-cta">Create account</button>
+      </form>
+    </div>
+    <aside class="modal-right center">
+      <div style="text-align:center">
+        <h4>New here?</h4>
+        <p class="muted">Create an account to manage product, team and billing.</p>
+        <button id="switch-to-register" class="btn btn-ghost">Create account</button>
+        <button id="switch-to-login" class="btn btn-ghost" style="display:none">Sign in</button>
+      </div>
+    </aside>
+  </div>
+</div>
+<style>
+    /* auth style
+    .modal-backdrop {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2,6,23,0.45);
+  z-index: 2000;
+  padding: 20px;
+}
+
+.modal-backdrop.show {
+  display: flex;
+}
+
+.modal {
+  background: var(--card);
+  width: 100%;
+  max-width: 760px;
+  border-radius: 14px;
+  box-shadow: 0 24px 60px rgba(3,10,30,0.5);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+}
+
+.modal-left {
+  padding: 28px;
+}
+
+.modal-right {
+  background: linear-gradient(180deg, rgba(13,110,253,0.06), rgba(0,80,255,0.02));
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form label {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.form input {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(2,6,23,0.06);
+  background: transparent;
+  color: var(--text);
+  outline: none;
+}
+
+.form input:focus {
+  box-shadow: 0 6px 20px rgba(13,110,253,0.08);
+  border-color: rgba(13,110,253,0.18);
+}
+
+
+
+root data
+
+
+:root {
+  --bg: #f7f9fc;
+  --card: #ffffff;
+  --muted: #64707a;
+  --text: #071122;
+  --accent: #0d6efd;
+  --accent-2: #0050ff;
+  --glass: rgba(255,255,255,0.6);
+  --radius: 14px;
+  --shadow: 0 8px 28px rgba(12,20,30,0.08);
+  --glass-shadow: 0 6px 18px rgba(2,6,23,0.06);
+}
+
+:root[data-theme="dark"] {
+  --bg: #071023;
+  --card: #071828;
+  --muted: #9aa6b2;
+  --text: #e6eef8;
+  --accent: #66a7ff;
+  --accent-2: #7fb3ff;
+  --glass: rgba(255,255,255,0.04);
+  --shadow: 0 10px 30px rgba(2,6,23,0.6);
+  --glass-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+    */
+</style>
+/*
+<script>
+    // auth modal script
+/*
+    
+    // Modal Handling
+const authModal = document.getElementById("auth-modal");
+const openAuthBtn = document.getElementById("open-auth");
+const closeAuthBtn = document.getElementById("close-auth");
+const loginForm = document.getElementById("login-form");
+const registerForm = document.getElementById("register-form");
+const switchToRegister = document.getElementById("switch-to-register");
+const switchToLogin = document.getElementById("switch-to-login");
+
+// Open Modal
+openAuthBtn.addEventListener("click", () => {
+  authModal.classList.add("show");
+  loginForm.style.display = "flex";
+  registerForm.style.display = "none";
+  switchToRegister.style.display = "inline-block";
+  switchToLogin.style.display = "none";
+});
+
+// Close Modal
+closeAuthBtn.addEventListener("click", () => {
+  authModal.classList.remove("show");
+});
+
+// Switch to Register Form
+switchToRegister.addEventListener("click", () => {
+  loginForm.style.display = "none";
+  registerForm.style.display = "flex";
+  switchToRegister.style.display = "none";
+  switchToLogin.style.display = "inline-block";
+});
+
+// Switch to Login Form
+switchToLogin.addEventListener("click", () => {
+  loginForm.style.display = "flex";
+  registerForm.style.display = "none";
+  switchToRegister.style.display = "inline-block";
+  switchToLogin.style.display = "none";
+});
+
+// Close modal if clicked outside
+window.addEventListener("click", (e) => {
+  if (e.target === authModal) {
+    authModal.classList.remove("show");
+  }
+});
+    
+</script>
+*/
