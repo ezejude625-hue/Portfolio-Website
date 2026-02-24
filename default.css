@@ -37,6 +37,7 @@
     --accent: #9A8C98;
     --accent-2: #4A4E69;
     --light: #22223B;
+    --white: #F2E9E4;
     --mid: #4A4E69;
     --text-muted: #6B6680;
     --border: rgba(34, 34, 59, 0.12);
@@ -51,6 +52,10 @@
 
 [data-theme="light"] .hero {
     background: var(--bg);
+}
+
+[data-theme="light"] .white {
+    color: var(--white);
 }
 
 [data-theme="light"] .hero::before {
