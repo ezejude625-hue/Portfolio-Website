@@ -1012,6 +1012,7 @@ code {
 
   .nav-links.open {
     transform: translateY(0);
+    top: var(--nav-h);
     pointer-events: auto;
   }
 
