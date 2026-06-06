@@ -1,125 +1,441 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub | Documentation</title>
-    <link rel="stylesheet" href="github.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Documentation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="github.css" />
 </head>
-
 <body>
-    <section class="head">
-        <header>
-            <h1>GitHub Documentation</h1>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#interface">Interface</a>
-            </nav>
-        </header>
-    </section>
-    <section class="about-github" id="about">
-        <div class="container">
-            <h2>What is GitHub?</h2>
-            <p>GitHub is a web-based platform that provides hosting for softwares development projects using Git,
-                enabling version control, collaboration, and sharing of code among developers. Git keeps track of
-                changes in code, so you can see the history, undo mistakes and manage different versions of a project.
-            </p>
 
-            <p>In a nutshell, GitHub is a platform of version control and collaboration that lets developers store,
-                share, and work on code together.</p>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.929.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.216.69.825.572C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitDocs
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#interface" class="nav-link">Interface</a></li>
+        <li><a href="#repo-creation" class="nav-link">Repositories</a></li>
+        <li><a href="#vscode" class="nav-link">VS Code</a></li>
+        <li><a href="#collaboration" class="nav-link">Collaborate</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">Developer Reference</span>
+      <h1>GitHub<br /><span class="hero-accent">Documentation</span></h1>
+      <p class="hero-sub">Everything you need to understand version control, repositories, collaboration, and integrating GitHub into your workflow.</p>
+      <div class="hero-cta">
+        <a href="#about" class="btn btn-primary">Start Reading</a>
+        <a href="#repo-creation" class="btn btn-ghost">Create Repo →</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="code-card">
+        <div class="code-card-dots"><span></span><span></span><span></span></div>
+        <pre><code><span class="c-green">git</span> init
+<span class="c-green">git</span> add .
+<span class="c-green">git</span> commit -m <span class="c-amber">"first commit"</span>
+<span class="c-green">git</span> branch -M main
+<span class="c-green">git</span> remote add origin
+    <span class="c-muted">https://github.com/user/repo.git</span>
+<span class="c-green">git</span> push -u origin main</code></pre>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-label">01 — About</div>
+      <h2 class="section-title">What is GitHub?</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>GitHub is a web-based platform that provides hosting for software development projects using <strong>Git</strong> — enabling version control, collaboration, and sharing of code among developers.</p>
+          <p>Git keeps track of every change in your code, so you can view the full history, undo mistakes, and manage different versions of a project simultaneously.</p>
+          <p>In short, GitHub is a platform for version control and collaboration that lets developers store, share, and work on code together — from solo projects to global open-source communities.</p>
         </div>
-    </section>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-num">100M+</span>
+            <span class="stat-label">Developers</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">420M+</span>
+            <span class="stat-label">Repositories</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">4B+</span>
+            <span class="stat-label">Contributions/yr</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">90%</span>
+            <span class="stat-label">Fortune 100 use it</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="interface" id="interface">
-        <div class="container">
-            <h2>The Interface of GitHub</h2>
-            <div class="part">
-                <h3>Main GitHub Dashboard (after logging in)</h3>
-                <ul>
-                    <li><b>Naviation Bar (Top)</b> – Includes links to search, notifications, profile, and settings.
-                    </li><br>
-                    <li><b>search Bar</b> – Lets you search for repository, users, or code.</li><br>
-                    <li><b>Repository List</b> – Shows you own repos and ones you have contributed to.</li><br>
-                    <li><b>Activity Feed</b> – Updates about repos, commits, pull request, and issues from projects you
-                        follow.</li><br>
-                </ul>
+  <!-- INTERFACE -->
+  <section class="section section-alt" id="interface">
+    <div class="container">
+      <div class="section-label">02 — Interface</div>
+      <h2 class="section-title">The GitHub Interface</h2>
+      <p class="section-intro">GitHub's interface is organized into dashboards, repositories, and tabs that cover code, collaboration, and project management.</p>
+
+      <div class="tabs-wrapper">
+        <div class="tabs" role="tablist">
+          <button class="tab active" role="tab" data-tab="dashboard" aria-selected="true">Dashboard</button>
+          <button class="tab" role="tab" data-tab="repository" aria-selected="false">Repository</button>
+          <button class="tab" role="tab" data-tab="fileview" aria-selected="false">File View</button>
+          <button class="tab" role="tab" data-tab="profile" aria-selected="false">Profile</button>
+        </div>
+
+        <div class="tab-content active" id="tab-dashboard">
+          <div class="interface-grid">
+            <div class="interface-card">
+              <div class="icard-icon">🔍</div>
+              <h4>Navigation Bar</h4>
+              <p>Top bar with links to search, notifications, your profile, and global settings.</p>
             </div>
-            <div class="part">
-                <h3>Inside a Repository</h3>
-                <ul>
-                    <li><b>Code Tab</b> – Displays flies and folders of the project. You can browse code, read
-                        documentation, or clone/download it.</li><br>
-                    <li><b>Issues Tab</b> – Track bugs, tasks, and feature requests.</li><br>
-                    <li><b>Pull Requests Tab</b> – Where changes are proposed, reviewed, and merged.</li><br>
-                    <li><b>Actions Tab</b> – Shows automated workflows (like tests or deployments).</li><br>
-                    <li><b>Projects Tab</b> – Boards for organizing tasks (like trello).</li><br>
-                    <li><b>Wiki Tab</b> – Documentation or guides for the project.</li><br>
-                    <li><b>Security Tab</b> – Vulnerability alerts, dependency reports.</li><br>
-                    <li><b>Insights Tab</b> – Analytics about repo activity, contributors, and traffic.</li><br>
-                    <li><b>Notification Tab</b> – Helps you stay on top of important project changes. It keeps you
-                        updated.</li><br>
-                    <li><b>Explore Tab</b> – Lets you discover projects, topics, and trending repository. It helps you
-                        discover new projects and communities.</li><br>
-                    <li><b>Settings Tab</b> – Manage repo details (name, access, collaborators, etc)</li><br>
-                </ul>
+            <div class="interface-card">
+              <div class="icard-icon">🔎</div>
+              <h4>Search Bar</h4>
+              <p>Search for any repository, user, or code snippet across GitHub's entire platform.</p>
             </div>
-            <div class="part">
-                <h3>File View</h3>
-                <ul>
-                    <li>Displays file contents.</li><br>
-                    <li>Options for editing (if you have permission), viewing history, or seeing who changed what.</li>
-                    <br>
-                </ul>
+            <div class="interface-card">
+              <div class="icard-icon">📁</div>
+              <h4>Repository List</h4>
+              <p>Displays your own repositories and any repos you've contributed to recently.</p>
             </div>
-            <div class="part">
-                <h3>Profile Page</h3>
-                <ul>
-                    <li>Shows your bio, pinned repos, contribution graph (green squares), and activity.</li>
-                </ul>
+            <div class="interface-card">
+              <div class="icard-icon">📰</div>
+              <h4>Activity Feed</h4>
+              <p>Live updates on commits, pull requests, and issues from projects you follow.</p>
             </div>
-            <p>Basically, the interface is organized into dashboards, repos, and tabs that cover code, collaboration,
-                and project management.</p>
+          </div>
         </div>
-    </section>
 
-    <section class="repo-creation">
-        <div class="container">
-            <h2>How to Create a Repository on GitHub</h2>
-            <p>After logging in</p>
-            <ul>
-                <li>Click the "+" icon at the top right (new repository)</li>
-                <li>Enter your <b>repository name</b> (e.g new-repository)</li>
-                <li><b>Description</b> is optional</li>
-                <li>Choose public or private</li>
-                <li>Click <b>Create repository</b> and then you are done</li>
-            </ul>
+        <div class="tab-content" id="tab-repository">
+          <div class="interface-grid">
+            <div class="interface-card">
+              <div class="icard-icon">💻</div>
+              <h4>Code Tab</h4>
+              <p>Displays files and folders. Browse code, read docs, or clone/download the project.</p>
+            </div>
+            <div class="interface-card">
+              <div class="icard-icon">🐛</div>
+              <h4>Issues Tab</h4>
+              <p>Track bugs, tasks, and feature requests. The central hub for project discussion.</p>
+            </div>
+            <div class="interface-card">
+              <div class="icard-icon">🔀</div>
+              <h4>Pull Requests</h4>
+              <p>Where code changes are proposed, reviewed, discussed, and merged into the main branch.</p>
+            </div>
+            <div class="interface-card">
+              <div class="icard-icon">⚙️</div>
+              <h4>Actions Tab</h4>
+              <p>Automated CI/CD workflows — like running tests or deploying on every push.</p>
+            </div>
+            <div class="interface-card">
+              <div class="icard-icon">📋</div>
+              <h4>Projects Tab</h4>
+              <p>Kanban-style boards for organizing tasks, milestones, and project management.</p>
+            </div>
+            <div class="interface-card">
+              <div class="icard-icon">📖</div>
+              <h4>Wiki Tab</h4>
+              <p>Built-in documentation and guides written by the repo maintainers.</p>
+            </div>
+            <div class="interface-card">
+              <div class="icard-icon">🛡️</div>
+              <h4>Security Tab</h4>
+              <p>Vulnerability alerts, dependency scanning, and security advisory reports.</p>
+            </div>
+            <div class="interface-card">
+              <div class="icard-icon">📊</div>
+              <h4>Insights Tab</h4>
+              <p>Analytics on repo activity, contributor stats, traffic, and code frequency.</p>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <section class="linking-vscode">
-        <div class="container">
-            <h2>How to link VS Code with GitHub (First time)</h2>
-            <p>first move for linking VS Code with GitHub is by downloading Git</p>
-            <p>After Installing Git make sure it works properly in command instructions. Set your identity (only once)
-                on git and then open a project folder in VS Code conduct the push repo then you may need to log in with
-                GitHub the first time VS Code pushes.</p>
+        <div class="tab-content" id="tab-fileview">
+          <div class="interface-grid">
+            <div class="interface-card wide">
+              <div class="icard-icon">📄</div>
+              <h4>File Contents</h4>
+              <p>Displays the raw content of any file with syntax highlighting for supported languages.</p>
+            </div>
+            <div class="interface-card wide">
+              <div class="icard-icon">✏️</div>
+              <h4>Edit &amp; History</h4>
+              <p>Edit files directly in the browser (if you have write permission), view revision history, and see who changed what line with <code>git blame</code>.</p>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <section class="collaboration">
-        <div class="container">
-            <h2>How to collaborate on GitHub</h2>
-            <ol>
-                <li>Open your repository on GitHub</li>
-                <li>Go to settings, click on collaborators</li>
-                <li>Click Add collaborator and enter their GitHub username</li>
-                <li>They accept the invite you both push/pull changes.</li>
-            </ol>
+        <div class="tab-content" id="tab-profile">
+          <div class="interface-grid">
+            <div class="interface-card wide">
+              <div class="icard-icon">👤</div>
+              <h4>Bio &amp; Pinned Repos</h4>
+              <p>Shows your personal bio, pinned repositories you want to highlight, and links to your social or personal site.</p>
+            </div>
+            <div class="interface-card wide">
+              <div class="icard-icon">🟩</div>
+              <h4>Contribution Graph</h4>
+              <p>The iconic green squares grid — shows your commit activity for the past year, day by day. A developer's track record at a glance.</p>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 GitHub Documentation. All Rights Reserved.</p>
-    </footer>
+  <!-- REPO CREATION -->
+  <section class="section" id="repo-creation">
+    <div class="container">
+      <div class="section-label">03 — Repositories</div>
+      <h2 class="section-title">How to Create a Repository</h2>
+      <p class="section-intro">After logging into your GitHub account, follow these steps to create your first repository.</p>
+      <div class="steps-list">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-body">
+            <h4>Click the <code>+</code> icon</h4>
+            <p>Find the plus icon in the top-right corner of the GitHub navbar, then select <strong>New repository</strong> from the dropdown.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-body">
+            <h4>Enter a repository name</h4>
+            <p>Choose a short, memorable name for your project. For example: <code>my-first-project</code>. No spaces — use hyphens.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-body">
+            <h4>Add an optional description</h4>
+            <p>Write a brief summary of what your project does. This appears on your profile and in search results.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <div class="step-body">
+            <h4>Choose visibility</h4>
+            <p>Select <strong>Public</strong> (visible to everyone) or <strong>Private</strong> (only visible to you and collaborators).</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">05</div>
+          <div class="step-body">
+            <h4>Click <strong>Create repository</strong></h4>
+            <p>That's it! Your repository is live. GitHub will guide you through pushing your first code.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VS CODE -->
+  <section class="section section-alt" id="vscode">
+    <div class="container">
+      <div class="section-label">04 — VS Code Integration</div>
+      <h2 class="section-title">Linking VS Code with GitHub</h2>
+      <p class="section-intro">Connecting your local VS Code editor to GitHub allows you to push and pull code without leaving your editor.</p>
+      <div class="two-col">
+        <div class="info-card">
+          <div class="info-card-header">
+            <span class="info-badge">Step 1</span>
+            <h4>Install Git</h4>
+          </div>
+          <p>Download and install Git from <strong>git-scm.com</strong>. Git is the underlying version control system that GitHub is built on. Verify it works by running <code>git --version</code> in your terminal.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-card-header">
+            <span class="info-badge">Step 2</span>
+            <h4>Configure Your Identity</h4>
+          </div>
+          <div class="code-block">
+            <pre><code>git config --global user.name "Your Name"
+git config --global user.email "you@example.com"</code></pre>
+          </div>
+          <p>Only needs to be done once per machine.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-card-header">
+            <span class="info-badge">Step 3</span>
+            <h4>Open Your Project in VS Code</h4>
+          </div>
+          <p>Open any project folder in VS Code. Use the built-in <strong>Source Control</strong> panel (the branch icon in the sidebar) to initialise Git and connect to your GitHub remote.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-card-header">
+            <span class="info-badge">Step 4</span>
+            <h4>Authenticate with GitHub</h4>
+          </div>
+          <p>The first time you push to GitHub, VS Code will prompt you to sign in. Follow the browser-based OAuth flow — once authenticated, your credentials are saved securely.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLABORATION -->
+  <section class="section" id="collaboration">
+    <div class="container">
+      <div class="section-label">05 — Collaboration</div>
+      <h2 class="section-title">How to Collaborate on GitHub</h2>
+      <p class="section-intro">GitHub makes it simple to invite others to work on your project.</p>
+      <ol class="collab-steps">
+        <li>
+          <span class="collab-num">1</span>
+          <div>
+            <strong>Open your repository</strong>
+            <p>Navigate to the repository you want to share on GitHub.</p>
+          </div>
+        </li>
+        <li>
+          <span class="collab-num">2</span>
+          <div>
+            <strong>Go to Settings → Collaborators</strong>
+            <p>In the repository's top navigation, click <strong>Settings</strong>, then select <strong>Collaborators</strong> from the left sidebar.</p>
+          </div>
+        </li>
+        <li>
+          <span class="collab-num">3</span>
+          <div>
+            <strong>Add a collaborator</strong>
+            <p>Click <strong>Add collaborator</strong> and search by their GitHub username or email address.</p>
+          </div>
+        </li>
+        <li>
+          <span class="collab-num">4</span>
+          <div>
+            <strong>They accept the invite</strong>
+            <p>Your collaborator receives an email invitation. Once they accept, you can both push and pull changes freely.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="tip-box">
+        <span class="tip-icon">💡</span>
+        <div>
+          <strong>Pro Tip: Use Pull Requests</strong>
+          <p>Even when collaborating directly, use <strong>Pull Requests</strong> to propose changes. It keeps a clear record of what changed and why, and allows review before merging into the main branch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.929.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.216.69.825.572C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitDocs
+      </div>
+      <p class="footer-text">© 2025 GitHub Documentation. All Rights Reserved.</p>
+      <nav class="footer-nav">
+        <a href="#about">About</a>
+        <a href="#interface">Interface</a>
+        <a href="#repo-creation">Repos</a>
+        <a href="#vscode">VS Code</a>
+        <a href="#collaboration">Collaborate</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    /* ── Navbar scroll behavior ── */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    /* ── Mobile nav toggle ── */
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('open');
+      toggle.classList.toggle('open');
+    });
+    links.querySelectorAll('a').forEach(a =>
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        toggle.classList.remove('open');
+      })
+    );
+
+    /* ── Active nav link on scroll ── */
+    const sections = document.querySelectorAll('section[id], header[id]');
+    const navLinkEls = document.querySelectorAll('.nav-link');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navLinkEls.forEach(l => l.classList.remove('active'));
+          const match = document.querySelector(`.nav-link[href="#${e.target.id}"]`);
+          if (match) match.classList.add('active');
+        }
+      });
+    }, { threshold: 0.4 });
+    sections.forEach(s => observer.observe(s));
+
+    /* ── Tabs ── */
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+      });
+    });
+
+    /* ── Scroll-reveal ── */
+    const revealEls = document.querySelectorAll('.step, .info-card, .stat-card, .interface-card, .collab-steps li, .tip-box');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('revealed');
+          revealObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach((el, i) => {
+      el.style.transitionDelay = `${(i % 4) * 60}ms`;
+      revealObserver.observe(el);
+    });
+
+    /* ── Smooth scroll for all anchor links ── */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
 </body>
+</html>
