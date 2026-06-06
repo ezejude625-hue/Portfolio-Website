@@ -893,8 +893,6 @@ body {
 code {
   font-family: 'Courier New', monospace;
   font-size: 13px;
-  background: var(--pale-blue);
-  border: 1px solid var(--border);
   border-radius: 4px;
   padding: 1px 6px;
   color: var(--teal-dark);
