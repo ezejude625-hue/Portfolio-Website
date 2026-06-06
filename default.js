@@ -70,6 +70,44 @@ sections.forEach((s) => sectionObserver.observe(s));
 const form = document.getElementById("contactForm");
 const successMessage = document.getElementById("successMessage");
 
+
+emailjs.init("05y3vhUu-C9irL6pr");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const submitBtn = document.getElementById("submit");
+
+  document.getElementById("time").value = new Date().toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" });
+  submitBtn.disabled = true;
+  submitBtn.innerHTML =
+    '<i class="fas fa-spinner fa-spin"></i> Sending…';
+
+  try {
+    await emailjs.sendForm(
+      "service_whomcl9",
+      "template_msr4qju",
+      form
+    );
+
+    successMessage.style.display = "flex";
+    form.reset();
+
+    setTimeout(() => {
+      successMessage.style.display = "none";
+    }, 4000);
+  } catch (error) {
+    console.error(error);
+    alert("Failed to send message.");
+    console.error(error);
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML =
+      '<i class="fa-solid fa-paper-plane"></i> Send Message';
+  }
+});
+
+/*
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -89,7 +127,7 @@ form.addEventListener("submit", (e) => {
       successMessage.style.display = "none";
     }, 4000);
   }, 1200);
-});
+});*/
 
 // ── Skill bar animation on scroll ────────────
 const skillCards = document.querySelectorAll(".skill-card");
