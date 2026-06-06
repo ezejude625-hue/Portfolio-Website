@@ -894,7 +894,7 @@ body {
 /* Hide swiper prev/next navigation buttons */
 .swiper-button-next,
 .swiper-button-prev {
-    display: flex;
+    display: none !important;
 }
 
 .swiper-pagination-bullet {
@@ -1422,11 +1422,6 @@ body {
         align-items: center;
         text-align: center;
     }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-        display: none !important;
-    }
 }
 
 @media (max-width: 480px) {
@@ -1449,10 +1444,5 @@ body {
     .hero-img-frame {
         width: 200px;
         height: 200px;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-        display: none !important;
     }
 }
