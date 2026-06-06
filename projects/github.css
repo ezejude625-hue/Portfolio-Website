@@ -656,7 +656,6 @@ body {
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 2rem;
   gap: 20px;
 }
 
@@ -667,7 +666,7 @@ body {
   border-radius: var(--radius-lg);
   padding: 24px;
   opacity: 0;
-  transform: translateY(20px);
+  /* transform: translateY(20px); */
   transition: opacity .45s ease, transform .45s ease, box-shadow var(--tr);
 }
 
