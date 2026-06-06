@@ -893,8 +893,6 @@ body {
 code {
   font-family: 'Courier New', monospace;
   font-size: 13px;
-  background: var(--pale-blue);
-  border: 1px solid var(--border);
   border-radius: 4px;
   padding: 1px 6px;
   color: var(--teal-dark);
@@ -993,7 +991,8 @@ code {
 
   .nav-links {
     position: fixed;
-    top: var(--nav-h);
+    /* top: var(--nav-h); */
+    top: 0;
     left: 0;
     right: 0;
     background: rgba(255, 255, 255, .98);
