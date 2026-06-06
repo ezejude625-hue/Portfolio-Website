@@ -655,7 +655,7 @@ body {
 /* ─── TWO-COL CARDS ─────────────────────────────────────── */
 .two-col {
   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
 }
 
@@ -666,7 +666,8 @@ body {
   border-radius: var(--radius-lg);
   padding: 24px;
   opacity: 0;
-  /* transform: translateY(20px); */
+  min-width: 0;
+  transform: translateY(20px);
   transition: opacity .45s ease, transform .45s ease, box-shadow var(--tr);
 }
 
